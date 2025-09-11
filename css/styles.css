@@ -12,7 +12,6 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-/* Стили для header */
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -24,7 +23,6 @@ body {
     margin: 0 auto;
 }
 
-/* Стили для логотипа */
 #logo img {
     height: 30px;
     width: auto;
@@ -58,7 +56,6 @@ body {
     color: #000000;
 }
 
-/* Подчеркивание при наведении */
 .nav-list li a::after {
     content: '';
     position: absolute;
@@ -73,80 +70,6 @@ body {
 
 .nav-list li a:hover::after {
     width: 100%;
-}
-
-
-.footer-container {
-    flex-direction: column;
-    background-color: #f0f0f0;  /* Светлый фон */
-    padding: 20px;              /* Отступы вокруг текста */
-    text-align: center;         /* Выравнивание по центру */
-    color: #333;                /* Тёмно-серый текст */
-
-}
-
-
-/* Адаптивность для планшетов (768px - 1024px) */
-@media (max-width: 1024px) {
-    .header-container {
-        padding: 1.25rem 2rem;
-    }
-
-    .nav-list {
-        gap: 2rem;
-    }
-
-    .nav-list li a {
-        font-size: 1.05rem;
-    }
-
-    #logo img {
-        height: 30px;
-    }
-}
-
-@media (max-width: 768px) {
-    .header-container {
-        padding: 1rem 1.5rem;
-    }
-
-    .nav-list {
-        gap: 1.5rem;
-    }
-
-    .nav-list li a {
-        font-size: 1rem;
-        letter-spacing: 0.3px;
-    }
-
-    #logo img {
-        height: 38px;
-    }
-}
-
-/* Адаптивность для мобильных устройств (<=767px) */
-@media (max-width: 767px) {
-    .header-container {
-        flex-direction: column;
-        padding: 1.5rem 1rem;
-        gap: 1.2rem;
-        text-align: center;
-    }
-
-    .nav-list {
-        gap: 1.2rem;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .nav-list li a {
-        font-size: 0.95rem;
-        padding: 0.4rem 0;
-    }
-
-    #logo img {
-        height: 30px;
-    }
 }
 
 
@@ -179,12 +102,14 @@ h2 {
     align-items: center;
     gap: 2rem;
 }
+
 @media (min-width: 768px) {
     .about-content {
         flex-direction: row;
         align-items: flex-start;
     }
 }
+
 
 .avatar {
     width: 200px;
@@ -204,7 +129,7 @@ h2 {
     padding-left: 1.5rem;
 }
 
-/* Стили для секции "Навыки" */
+
 .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -243,7 +168,7 @@ h2 {
     color: #4caf50;
 }
 
-/* Стили для секции "Портфолио" */
+
 .portfolio-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -295,7 +220,7 @@ h2 {
     background: #555;
 }
 
-/* Стили для секции "Контакты" */
+
 .contacts-container {
     text-align: center;
 }
@@ -310,22 +235,63 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 1rem;
+
 }
 
-.contacts-list i {
-    margin-right: 1rem;
-    font-size: 1.2rem;
-    color: #333;
-    width: 20px;
-}
 
 .contacts-list a {
-    color: #333;
+    color: #000000;
     text-decoration: none;
     transition: color 0.3s;
 }
-.contacts-list a:hover {
-    color: #4caf50;
+
+
+/* Адаптивность для планшетов (768px - 1024px) */
+@media (max-width: 1024px) {
+    .header-container {
+        padding: 1.25rem 2rem;
+    }
+
+    .nav-list {
+        gap: 2rem;
+    }
+
+    .nav-list li a {
+        font-size: 1.05rem;
+    }
+
+    #logo img {
+        height: 30px;
+    }
 }
 
+/* Адаптивность для мобильных устройств (<=767px) */
+@media (max-width: 767px) {
+    .header-container {
+        flex-direction: column;
+        padding: 1.5rem 1rem;
+        gap: 1.2rem;
+        text-align: center;
+    }
 
+    .nav-list {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-list li a {
+        font-size: 0.95rem;
+        padding: 0.4rem 0;
+    }
+
+    #logo img {
+        height: 30px;
+    }
+
+    .about-content {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
