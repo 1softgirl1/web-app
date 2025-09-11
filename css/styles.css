@@ -1,0 +1,138 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Albert Sans', sans-serif;
+    line-height: 1.6;
+    color: #000000;
+}
+
+/* Стили для header */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    background-color: #fff;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Стили для логотипа */
+#logo img {
+    height: 30px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+#logo img:hover {
+    transform: scale(1.05);
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #2d2d2d;
+    text-transform: lowercase;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-list li a:hover {
+    color: #000000;
+}
+
+/* Подчеркивание при наведении */
+.nav-list li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #000000;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-list li a:hover::after {
+    width: 100%;
+}
+
+
+/* Адаптивность для планшетов (768px - 1024px) */
+@media (max-width: 1024px) {
+    .header-container {
+        padding: 1.25rem 2rem;
+    }
+
+    .nav-list {
+        gap: 2rem;
+    }
+
+    .nav-list li a {
+        font-size: 1.05rem;
+    }
+
+    #logo img {
+        height: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        padding: 1rem 1.5rem;
+    }
+
+    .nav-list {
+        gap: 1.5rem;
+    }
+
+    .nav-list li a {
+        font-size: 1rem;
+        letter-spacing: 0.3px;
+    }
+
+    #logo img {
+        height: 38px;
+    }
+}
+
+/* Адаптивность для мобильных устройств (<=767px) */
+@media (max-width: 767px) {
+    .header-container {
+        flex-direction: column;
+        padding: 1.5rem 1rem;
+        gap: 1.2rem;
+        text-align: center;
+    }
+
+    .nav-list {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-list li a {
+        font-size: 0.95rem;
+        padding: 0.4rem 0;
+    }
+
+    #logo img {
+        height: 30px;
+    }
+}
