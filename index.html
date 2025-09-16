@@ -124,7 +124,21 @@
     <section id="contacts">
         <h2>Контакты / Contacts</h2>
         <div class="contacts-container">
-            <p>Свяжитесь со мной удобным для вас способом:</p>
+            <p>Свяжитесь со мной удобным для вас способом:</p> <br>
+            <button class="open-form-modal">Оставить заявку</button>
+            <div class="modal" id="formModal">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <h2>Форма обратной связи</h2>
+                    <form id="contactForm">
+                        <input type="text" name="name" placeholder="Ваше имя" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <textarea name="message" placeholder="Сообщение" required></textarea>
+                        <button type="submit">Отправить</button>
+                        <div class="form-message"></div>
+                    </form>
+                </div>
+            </div>
             <ul class="contacts-list">
                 <li>
                     <i class="fas fa-envelope"></i>
@@ -134,7 +148,7 @@
                     <a >+7 (904) 963-21-95</a>
                 </li>
                 <li style="display: inline-block;">
-                    <a href="https://github.com/1softgirl1" target="_blank"><img src="img/telegram-svgrepo-com.svg"  width="40" height="40"></a>
+                    <a href="https://t.me/softgirl1" target="_blank"><img src="img/telegram-svgrepo-com.svg"  width="40" height="40"></a>
                 </li>
                 <li style="display: inline-block;">
                     <a href="https://github.com/1softgirl1" target="_blank"><img src="img/github.svg"  width="40" height="40"></a>
