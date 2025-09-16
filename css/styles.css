@@ -33,11 +33,13 @@ body {
     transform: scale(1.05);
 }
 
+
 .nav-list {
+    display: none;
     font-family: 'Albert Sans', sans-serif;
-    display: flex;
     list-style: none;
     gap: 2.5rem;
+
 }
 
 .nav-list li a {
@@ -72,6 +74,40 @@ body {
     width: 100%;
 }
 
+.dropdown-toggle {
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    text-decoration: none;
+    color: #000000;
+    text-transform: lowercase;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.dropdown-toggle:hover {
+    color: #000000;
+}
+
+.dropdown-toggle:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #000000;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.dropdown-toggle:hover::after {
+    width: 100%;
+}
 
 main {
     max-width: 1200px;
@@ -235,17 +271,12 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 1rem;
-
 }
 
 
 .contacts-list a {
     color: #000000;
-    text-decoration: none;
-    transition: color 0.3s;
 }
-
 
 /* Адаптивность для планшетов (768px - 1024px) */
 @media (max-width: 1024px) {
@@ -294,4 +325,103 @@ h2 {
         flex-direction: row;
         align-items: flex-start;
     }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.modal-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    color: black;
+}
+
+button {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background: #555;
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    background-color: white;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    text-align: center;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #999;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#contactForm input,
+#contactForm textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#contactForm textarea {
+    min-height: 120px;
+    resize: vertical;
 }
