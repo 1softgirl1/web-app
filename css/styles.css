@@ -167,9 +167,8 @@ h2 {
 
 
 .skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1.5rem;
+    margin: 0 auto;
+    padding: 0 10px;
 }
 
 .skill-card {
@@ -425,3 +424,4 @@ button:hover {
     min-height: 120px;
     resize: vertical;
 }
+
