@@ -8,156 +8,150 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <div id="logo" >
-                <img src="img/logo.png" />
-            </div>
-            <nav>
-                <ul class="nav-list">
-                    <li><a href="#about">about</a></li>
-                    <li><a href="#skills">skills</a></li>
-                    <li><a href="#portfolio">portfolio</a></li>
-                    <li><a href="#contacts">contacts</a></li>
-                </ul>
-            </nav>
+<header>
+    <div class="header-container">
+        <div id="logo" >
+            <img src="img/logo.png"/>
         </div>
-    </header>
-    <main>
-        <section id="about">
-            <h2>Обо мне / About</h2>
-            <div class="about-content">
-                <img src="img/avatar.jpg" alt="Мое фото" class="avatar">
-                <div class="about-text">
-                    <p>Я — начинающий веб-разработчик, UX/UI дизайнер. На данный момент я являюсь студенткой и все свои силы направляю на то, чтобы не просто получить диплом, а по-настоящему освоить современные технологии.</p>
-                    <p>Мой путь начался с вёрстки (HTML/CSS), где я старалась создавать визуально приятные и адаптивные интерфейсы. Сейчас я активно погружаюсь в Kotlin мобильную разработку. В планах — освоить один из популярных фреймворков (React, Vue) и разобраться с бэкенд-технологиями (Node.js), чтобы стать полноценным full-stack специалистом.</p>
-                    <p></p>
+        <nav class="dropdown">
+            <div class="dropdown-toggle">Меню</div>
+            <ul class="nav-list">
+                <li><a href="#about">about</a></li>
+                <li><a href="#skills">skills</a></li>
+                <li><a href="#portfolio">portfolio</a></li>
+                <li><a href="#contacts">contacts</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <section id="about">
+        <h2>Обо мне / About</h2>
+        <div class="about-content">
+            <img src="img/avatar.jpg" alt="Мое фото" class="avatar">
+            <div class="about-text">
+                <p>Я — начинающий веб-разработчик, UX/UI дизайнер. На данный момент я являюсь студенткой и все свои силы направляю на то, чтобы не просто получить диплом, а по-настоящему освоить современные технологии.</p>
+                <p>Мой путь начался с вёрстки (HTML/CSS), где я старалась создавать визуально приятные и адаптивные интерфейсы. Сейчас я активно погружаюсь в Kotlin мобильную разработку. В планах — освоить один из популярных фреймворков (React, Vue) и разобраться с бэкенд-технологиями (Node.js), чтобы стать полноценным full-stack специалистом.</p>
+                <p></p>
+            </div>
+        </div>
+    </section>
+    <section id="skills">
+        <h2>Навыки / Skills</h2>
+        <div class="skills-container owl-carousel owl-theme">
+            <div class="skill-card item">
+                <h3>HTML</h3>
+                <div class="skill-level">
+                    <div class="skill-progress" style="width: 70%;"></div>
+                </div>
+                <span class="skill-percent">70%</span>
+            </div>
+
+            <div class="skill-card item">
+                <h3>CSS</h3>
+                <div class="skill-level">
+                    <div class="skill-progress" style="width: 65%;"></div>
+                </div>
+                <span class="skill-percent">65%</span>
+            </div>
+
+            <div class="skill-card item">
+                <h3>JavaScript</h3>
+                <div class="skill-level">
+                    <div class="skill-progress" style="width: 75%;"></div>
+                </div>
+                <span class="skill-percent">75%</span>
+            </div>
+
+            <div class="skill-card item">
+                <h3>Python</h3>
+                <div class="skill-level">
+                    <div class="skill-progress" style="width: 80%;"></div>
+                </div>
+                <span class="skill-percent">80%</span>
+            </div>
+
+            <div class="skill-card item">
+                <h3>UI/UX Design</h3>
+                <div class="skill-level">
+                    <div class="skill-progress" style="width: 75%;"></div>
+                </div>
+                <span class="skill-percent">75%</span>
+            </div>
+
+            <div class="skill-card item">
+                <h3>SQL</h3>
+                <div class="skill-level">
+                    <div class="skill-progress" style="width: 90%;"></div>
+                </div>
+                <span class="skill-percent">90%</span>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio">
+        <h2>Мои работы / Portfolio</h2>
+        <div class="portfolio-container">
+
+        </div>
+    </section>
+    <section id="contacts">
+        <h2>Контакты / Contacts</h2>
+        <div class="contacts-container">
+            <p>Свяжитесь со мной удобным для вас способом:</p> <br>
+            <button class="open-form-modal">Оставить заявку</button>
+            <div class="modal" id="formModal">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <h2>Форма обратной связи</h2>
+                    <form id="contactForm">
+                        <input type="text" name="name" placeholder="Ваше имя" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <textarea name="message" placeholder="Сообщение" required></textarea>
+                        <button type="submit">Отправить</button>
+                        <div class="form-message"></div>
+                    </form>
                 </div>
             </div>
-        </section>
-        <section id="skills">
-            <h2>Навыки / Skills</h2>
-            <div class="skills-container">
+            <ul class="contacts-list">
+                <li>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:your.email@example.com">karavaeva.lidaa@yandex.ru</a>
+                </li>
+                <li>
+                    <a >+7 (904) 963-21-95</a>
+                </li>
+                <li style="display: inline-block;">
+                    <a href="https://t.me/softgirl1" target="_blank"><img src="img/telegram-svgrepo-com.svg"  width="40" height="40"></a>
+                </li>
+                <li style="display: inline-block;">
+                    <a href="https://github.com/1softgirl1" target="_blank"><img src="img/github.svg"  width="40" height="40"></a>
+                </li>
+                <li style="display: inline-block;">
+                    <a href="https://vk.com/1softgirl1" target="_blank"><img src="img/vk.svg"  width="40" height="40"></a>
+                </li>
+            </ul>
+        </div>
+    </section>
 
-                <div class="skill-card">
-                    <h3>HTML/CSS</h3>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 70%;"></div>
-                    </div>
-                    <span class="skill-percent">70%</span>
-                </div>
+</main>
+<footer class="footer-container">
+    <p>(c) 2025 Компания «karavaeva dev.». Все права защищены.</p>
+</footer>
 
-                <div class="skill-card">
-                    <h3>JavaScript</h3>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 75%;"></div>
-                    </div>
-                    <span class="skill-percent">75%</span>
-                </div>
+<button id="backToTop" title="Наверх">↑</button>
 
-                <div class="skill-card">
-                    <h3>Python</h3>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 80%;"></div>
-                    </div>
-                    <span class="skill-percent">80%</span>
-                </div>
-
-                <div class="skill-card">
-                    <h3>UI/UX Design</h3>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 75%;"></div>
-                    </div>
-                    <span class="skill-percent">75%</span>
-                </div>
-
-            </div>
-        </section>
-        <section id="portfolio">
-            <h2>Мои работы / Portfolio</h2>
-            <div class="portfolio-container">
-
-                <div class="portfolio-card">
-
-                    <div class="portfolio-info">
-                        <h3>Курсовая работа: «Информационная система гостиничного комплекса»</h3>
-                        <p>Цель проекта: Разработка и реализация информационной системы для управления гостиничным комплексом.</p>
-                        <p>Технологический стек: MongoDB, JavaScript (Node.js),</p>
-                        <p>Результат: Полнофункциональный прототип системы, автоматизирующий основные бизнес-процессы гостиницы: бронирование, заселение, учет услуг и анализ деятельности.</p>
-                        <a href="https://github.com/1softgirl1/course_work_bd" class="portfolio-link">Посмотреть на GitHub</a>
-                    </div>
-                </div>
-
-                <div class="portfolio-card">
-                    <div class="portfolio-info">
-                        <h3>MovieBot</h3>
-                        <p>Movie Bot - это телеграм-бот для поиска информации о фильмах, получения рекомендаций, просмотра расписания кинотеатра и поиска фильмов по актерам. Бот использует API Кинопоиска для получения информации о фильмах и парсит сайты кинотеатров для получения актуального расписания.</p>
-                        <p>Используемые технологии: <br>
-                            Python 3  <br>
-                            aiogram==3.20.0.post0 (для работы с Telegram API)  <br>
-                            BeautifulSoup (для парсинга сайтов кинотеатров) <br>
-                            Requests (для работы с API Кинопоиска) <br>
-                            dotenv (для хранения конфиденциальных данных)  <br> <br>
-                        <a href="https://github.com/1softgirl1/tgbot" class="portfolio-link">Посмотреть на GitHib</a>
-                    </div>
-                </div>
-
-                <div class="portfolio-card">
-                    <div class="portfolio-info">
-                        <h3>Семестровая работа</h3>
-                        <p>Учебный проект на JavaScript, представляющий веб-приложение для работы с книгами. <br> <br>
-                            В нём реализованы: <br>
-                            - работа с API для получения данных о книгах (bookApi.js), <br>
-                            - выбор "книги дня" (bookOfTheDay.js), <br>
-                            - функционал избранного (favorites.js), <br>
-                            - логирование (logger.js), <br>
-                            - вспомогательные утилиты (utils.js).</p>
-                        <a href="https://github.com/1softgirl1/js_sem_work" class="portfolio-link">Посмотреть на GitHub</a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        <section id="contacts">
-            <h2>Контакты / Contacts</h2>
-            <div class="contacts-container">
-                <p>Свяжитесь со мной удобным для вас способом:</p>
-                <ul class="contacts-list">
-                    <li>
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:your.email@example.com">karavaeva.lidaa@yandex.ru</a>
-                    </li>
-                    <li>
-                        <a >+7 (904) 963-21-95</a>
-                    </li>
-                    <li style="display: inline-block;">
-                        <a href="https://github.com/1softgirl1" target="_blank"><img src="img/telegram-svgrepo-com.svg"  width="40" height="40"></a>
-                    </li>
-                    <li style="display: inline-block;">
-                        <a href="https://github.com/1softgirl1" target="_blank"><img src="img/github.svg"  width="40" height="40"></a>
-                    </li>
-                    <li style="display: inline-block;">
-                        <a href="https://vk.com/1softgirl1" target="_blank"><img src="img/vk.svg"  width="40" height="40"></a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="footer-container">
-        <p>(c) 2025 Компания «karavaeva dev.». Все права защищены.</p>
-
-    </footer>
 </body>
-
-
-
-
-</html>
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="js/script.js"></script>
+
+
 

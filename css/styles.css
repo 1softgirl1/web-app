@@ -1,17 +1,23 @@
-
+/* ==================
+   Базовые стили
+================== */
 * {
+    scroll-behavior: smooth;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-
     line-height: 1.6;
     color: #000000;
     font-family: 'Open Sans', sans-serif;
+    background: #ffffff;
 }
 
+/* ==================
+   Шапка и навигация
+================== */
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -28,21 +34,20 @@ body {
     width: auto;
     transition: transform 0.3s ease;
 }
-
 #logo img:hover {
     transform: scale(1.05);
 }
 
 .nav-list {
+    display: none;
     font-family: 'Albert Sans', sans-serif;
-    display: flex;
     list-style: none;
     gap: 2.5rem;
 }
 
 .nav-list li a {
     text-decoration: none;
-    color: #2d2d2d;
+    color: #000000;
     text-transform: lowercase;
     font-size: 1.1rem;
     font-weight: 500;
@@ -50,10 +55,6 @@ body {
     padding: 0.5rem 0;
     position: relative;
     transition: all 0.3s ease;
-}
-
-.nav-list li a:hover {
-    color: #000000;
 }
 
 .nav-list li a::after {
@@ -67,12 +68,46 @@ body {
     transition: all 0.3s ease;
     transform: translateX(-50%);
 }
-
-.nav-list li a:hover::after {
+.nav-list li a:hover::after,
+.nav-list li a.active::after {
     width: 100%;
 }
 
+.dropdown-toggle {
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    text-decoration: none;
+    color: #000000;
+    text-transform: lowercase;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.dropdown-toggle:hover {
+    color: #000000;
+}
+.dropdown-toggle:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #000000;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+.dropdown-toggle:hover::after {
+    width: 100%;
+}
 
+/* ==================
+   Основные секции
+================== */
 main {
     max-width: 1200px;
     margin: 2rem auto;
@@ -85,6 +120,7 @@ section {
     background: #fff;
     border-radius: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease;
 }
 
 h2 {
@@ -95,21 +131,21 @@ h2 {
     padding-bottom: 0.5rem;
 }
 
-
+/* ==================
+   About
+================== */
 .about-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
 }
-
 @media (min-width: 768px) {
     .about-content {
         flex-direction: row;
         align-items: flex-start;
     }
 }
-
 
 .avatar {
     width: 200px;
@@ -118,7 +154,6 @@ h2 {
     object-fit: cover;
     border: 5px solid #eee;
 }
-
 .about-text {
     flex: 1;
 }
@@ -129,24 +164,22 @@ h2 {
     padding-left: 1.5rem;
 }
 
-
+/* ==================
+   Skills
+================== */
 .skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1.5rem;
+    margin: 0 auto;
+    padding: 0 10px;
 }
-
 .skill-card {
     background: #f9f9f9;
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
-
 .skill-card h3 {
     margin-bottom: 0.5rem;
 }
-
 .skill-level {
     width: 100%;
     height: 10px;
@@ -155,26 +188,26 @@ h2 {
     margin: 0.5rem 0;
     overflow: hidden;
 }
-
 .skill-progress {
     height: 100%;
     background: linear-gradient(90deg, #4caf50, #8bc34a);
     border-radius: 5px;
     transition: width 1s ease-in-out;
 }
-
 .skill-percent {
     font-weight: bold;
     color: #4caf50;
 }
 
 
+/* ==================
+   Portfolio
+================== */
 .portfolio-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
 }
-
 .portfolio-card {
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -185,27 +218,22 @@ h2 {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
-
 .portfolio-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
     display: block;
 }
-
 .portfolio-info {
     padding: 1.5rem;
 }
-
 .portfolio-info h3 {
     margin-bottom: 0.5rem;
 }
-
 .portfolio-info p {
     margin-bottom: 1rem;
     color: #000000;
 }
-
 .portfolio-link {
     display: inline-block;
     background: #333;
@@ -220,53 +248,137 @@ h2 {
     background: #555;
 }
 
-
+/* ==================
+   Контакты
+================== */
 .contacts-container {
     text-align: center;
 }
-
 .contacts-list {
     list-style: none;
     margin-top: 1.5rem;
 }
-
 .contacts-list li {
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 1rem;
-
 }
-
-
 .contacts-list a {
     color: #000000;
-    text-decoration: none;
-    transition: color 0.3s;
 }
 
+/* ==================
+   Модальное окно
+================== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+.modal-content {
+    position: relative;
+    background-color: white;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    text-align: center;
+    animation: fadeIn 0.4s ease;
+}
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #999;
+}
+.modal-close:hover {
+    color: black;
+}
 
-/* Адаптивность для планшетов (768px - 1024px) */
+/* ==================
+   Форма обратной связи
+================== */
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+#contactForm input,
+#contactForm textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#contactForm textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* ==================
+   Кнопки
+================== */
+button,
+.carousel-button {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+button:hover,
+.carousel-button:hover {
+    background: #555;
+}
+
+/* Кнопка "Вверх" */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background-color: #000000;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+/* ==================
+   Адаптивность
+================== */
 @media (max-width: 1024px) {
     .header-container {
         padding: 1.25rem 2rem;
     }
-
     .nav-list {
         gap: 2rem;
     }
-
     .nav-list li a {
         font-size: 1.05rem;
     }
-
     #logo img {
         height: 30px;
     }
 }
-
-/* Адаптивность для мобильных устройств (<=767px) */
 @media (max-width: 767px) {
     .header-container {
         flex-direction: column;
@@ -274,24 +386,42 @@ h2 {
         gap: 1.2rem;
         text-align: center;
     }
-
     .nav-list {
         gap: 1.2rem;
         flex-wrap: wrap;
         justify-content: center;
     }
-
     .nav-list li a {
         font-size: 0.95rem;
         padding: 0.4rem 0;
     }
-
-    #logo img {
-        height: 30px;
-    }
-
     .about-content {
-        flex-direction: row;
-        align-items: flex-start;
+        flex-direction: column;
+        align-items: center;
     }
+}
+
+
+/* Анимация появления слайдов */
+.owl-item.active .item {
+    animation: slideInUp 3s ease;
+}
+
+/* ==================
+   Анимации
+================== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+    0%   { transform: scale(0.8); opacity: 0; }
+    50%  { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
 }
