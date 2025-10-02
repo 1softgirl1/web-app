@@ -1,6 +1,8 @@
 @use '../utils/variables' as *;
+@use '../utils/mixins' as *;
 
 .skills-container {
+  @include flex-center(column, 1.5rem);
   margin: 0 auto;
   padding: 0 10px;
 }

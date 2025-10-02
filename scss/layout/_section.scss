@@ -1,9 +1,14 @@
 @use '../utils/variables' as *;
+@use '../utils/mixins' as *;
 
 main {
   max-width: $container-max-width;
   margin: $spacing-xl auto;
   padding: 0 $spacing-xl;
+
+  @include respond-to(mobile) {
+    padding: 0 $spacing-md;
+  }
 }
 
 section {
@@ -13,6 +18,10 @@ section {
   border-radius: $border-radius-lg;
   box-shadow: $shadow-medium;
   animation: fadeIn $transition-slow ease;
+
+  @include respond-to(mobile) {
+    padding: $spacing-md;
+  }
 }
 
 h2 {

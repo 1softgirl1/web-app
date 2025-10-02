@@ -1,9 +1,8 @@
 @use '../utils/variables' as *;
+@use '../utils/mixins' as *;
 
 #contactForm {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+  @include flex-center(column, 15px);
   margin-top: 20px;
 
   input,

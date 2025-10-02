@@ -1,6 +1,8 @@
 @use '../utils/variables' as *;
+@use '../utils/mixins' as *;
 
 .portfolio-container {
+  @include grid-center;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: $spacing-xl;

@@ -1,6 +1,8 @@
 @use '../utils/variables' as *;
+@use '../utils/mixins' as *;
 
 .modal {
+  @include grid-center;
   display: none;
   position: fixed;
   top: 0;
@@ -12,6 +14,7 @@
 }
 
 .modal-content {
+  @include flex-center(column);
   position: relative;
   background-color: $secondary-color;
   margin: 10% auto;

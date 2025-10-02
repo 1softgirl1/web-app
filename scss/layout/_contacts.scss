@@ -1,4 +1,5 @@
 @use '../utils/variables' as *;
+@use '../utils/mixins' as *;
 
 .contacts-container {
   text-align: center;
@@ -9,10 +10,8 @@
   margin-top: $spacing-lg;
 
   li {
+    @include flex-center();
     margin-bottom: $spacing-md;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   a {

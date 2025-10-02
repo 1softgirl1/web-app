@@ -57,7 +57,11 @@ body {
 .button,
 button,
 .carousel-button {
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
   background: #333;
   color: #ffffff;
   padding: 0.5rem 1rem;
@@ -71,9 +75,22 @@ button:hover,
 .carousel-button:hover {
   background: #555;
 }
+@media (max-width: 600px) {
+  .button,
+  button,
+  .carousel-button {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.8rem;
+  }
+}
 
 /* Кнопка "Вверх" */
 #backToTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -86,15 +103,27 @@ button:hover,
   font-size: 22px;
   cursor: pointer;
   display: none;
-  align-items: center;
-  justify-content: center;
   z-index: 999;
 }
 #backToTop:hover {
   background: #555;
 }
+@media (max-width: 600px) {
+  #backToTop {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
 
 .dropdown-toggle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
   border: none;
   cursor: pointer;
   background-color: #ffffff;
@@ -129,22 +158,23 @@ button:hover,
 .about-content {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 2rem;
 }
-
-@media (max-width: 767px) {
-  .about-content {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-@media (min-width: 768px) {
+@media (max-width: 900px) {
   .about-content {
     flex-direction: row;
     align-items: flex-start;
   }
 }
+@media (max-width: 600px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .avatar {
   width: 200px;
   height: 200px;
@@ -172,10 +202,12 @@ button:hover,
   margin-top: 1.5rem;
 }
 .contacts-list li {
-  margin-bottom: 1rem;
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 1rem;
 }
 .contacts-list a {
   color: #000000;
@@ -184,6 +216,8 @@ button:hover,
 #contactForm {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 15px;
   margin-top: 20px;
 }
@@ -237,6 +271,8 @@ button:hover,
 }
 
 .modal {
+  display: grid;
+  place-items: center;
   display: none;
   position: fixed;
   top: 0;
@@ -248,6 +284,11 @@ button:hover,
 }
 
 .modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
   position: relative;
   background-color: #ffffff;
   margin: 10% auto;
@@ -327,6 +368,8 @@ button:hover,
 
 .portfolio-container {
   display: grid;
+  place-items: center;
+  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
 }
@@ -379,6 +422,11 @@ main {
   margin: 2rem auto;
   padding: 0 2rem;
 }
+@media (max-width: 600px) {
+  main {
+    padding: 0 1rem;
+  }
+}
 
 section {
   margin-bottom: 4rem;
@@ -387,6 +435,11 @@ section {
   border-radius: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   animation: fadeIn 0.8s ease ease;
+}
+@media (max-width: 600px) {
+  section {
+    padding: 1rem;
+  }
 }
 
 h2 {

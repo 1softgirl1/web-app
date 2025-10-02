@@ -1,6 +1,8 @@
 @use '../utils/variables' as *;
+@use '../utils/mixins' as *;
 
 .dropdown-toggle {
+  @include flex-center();
   border: none;
   cursor: pointer;
   background-color: $secondary-color;
