@@ -1,0 +1,22 @@
+@use '../utils/variables' as *;
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacing-lg $spacing-xxxl;
+  background-color: $secondary-color;
+  position: relative;
+  max-width: $container-max-width;
+  margin: 0 auto;
+}
+
+#logo img {
+  height: $logo-height;
+  width: auto;
+  transition: transform $transition-fast;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}

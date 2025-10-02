@@ -1,0 +1,38 @@
+@use '../utils/variables' as *;
+
+.skills-container {
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.skill-card {
+  background: $background-light;
+  padding: $spacing-lg;
+  border-radius: $border-radius-md;
+  box-shadow: $shadow-light;
+
+  h3 {
+    margin-bottom: $spacing-xs;
+  }
+}
+
+.skill-level {
+  width: 100%;
+  height: $skill-bar-height;
+  background: #ddd;
+  border-radius: $border-radius-sm;
+  margin: $spacing-xs 0;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background: $skill-gradient;
+  border-radius: $border-radius-sm;
+  transition: width $transition-slower;
+}
+
+.skill-percent {
+  font-weight: $font-weight-bold;
+  color: $success-color;
+}

@@ -1,0 +1,36 @@
+@use '../utils/variables' as *;
+
+button,
+.carousel-button {
+  display: inline-block;
+  background: $accent-color;
+  color: $secondary-color;
+  padding: $spacing-xs $spacing-md;
+  text-decoration: none;
+  border-radius: $border-radius-lg;
+  font-size: $font-size-sm;
+  transition: background-color $transition-fast;
+
+  &:hover {
+    background: $accent-hover;
+  }
+}
+
+/* Кнопка "Вверх" */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: $border-radius-circle;
+  background-color: $primary-color;
+  color: $secondary-color;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}

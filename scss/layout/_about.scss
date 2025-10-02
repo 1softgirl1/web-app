@@ -1,0 +1,35 @@
+@use '../utils/variables' as *;
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-xl;
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .about-content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.avatar {
+  width: $avatar-size;
+  height: $avatar-size;
+  border-radius: $border-radius-circle;
+  object-fit: cover;
+  border: 5px solid #eee;
+}
+
+.about-text {
+  flex: 1;
+
+  p, ul {
+    margin-bottom: $spacing-md;
+  }
+
+  ul {
+    padding-left: $spacing-lg;
+  }
+}

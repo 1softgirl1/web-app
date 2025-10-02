@@ -1,0 +1,21 @@
+@use '../utils/variables' as *;
+
+.contacts-container {
+  text-align: center;
+}
+
+.contacts-list {
+  list-style: none;
+  margin-top: $spacing-lg;
+
+  li {
+    margin-bottom: $spacing-md;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  a {
+    color: $primary-color;
+  }
+}

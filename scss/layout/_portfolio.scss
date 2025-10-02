@@ -1,0 +1,54 @@
+@use '../utils/variables' as *;
+
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: $spacing-xl;
+}
+
+.portfolio-card {
+  border: 1px solid $border-color;
+  border-radius: $border-radius-md;
+  overflow: hidden;
+  transition: transform $transition-fast;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $shadow-heavy;
+  }
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: $portfolio-img-height;
+  object-fit: cover;
+  display: block;
+}
+
+.portfolio-info {
+  padding: $spacing-lg;
+
+  h3 {
+    margin-bottom: $spacing-xs;
+  }
+
+  p {
+    margin-bottom: $spacing-md;
+    color: $primary-color;
+  }
+}
+
+.portfolio-link {
+  display: inline-block;
+  background: $accent-color;
+  color: $secondary-color;
+  padding: $spacing-xs $spacing-md;
+  text-decoration: none;
+  border-radius: $border-radius-lg;
+  font-size: $font-size-sm;
+  transition: background-color $transition-fast;
+
+  &:hover {
+    background: $accent-hover;
+  }
+}

@@ -1,0 +1,24 @@
+@use '../utils/variables' as *;
+
+main {
+  max-width: $container-max-width;
+  margin: $spacing-xl auto;
+  padding: 0 $spacing-xl;
+}
+
+section {
+  margin-bottom: $spacing-4xl;
+  padding: $spacing-xl;
+  background: $secondary-color;
+  border-radius: $border-radius-lg;
+  box-shadow: $shadow-medium;
+  animation: fadeIn $transition-slow ease;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: $spacing-xl;
+  color: #222;
+  border-bottom: 2px solid #eee;
+  padding-bottom: $spacing-xs;
+}
