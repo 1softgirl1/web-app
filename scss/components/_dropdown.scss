@@ -1,0 +1,36 @@
+@use '../utils/variables' as *;
+
+.dropdown-toggle {
+  border: none;
+  cursor: pointer;
+  background-color: $secondary-color;
+  text-decoration: none;
+  color: $primary-color;
+  text-transform: lowercase;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-normal;
+  letter-spacing: $letter-spacing;
+  padding: $spacing-xs 0;
+  position: relative;
+  transition: all $transition-fast;
+
+  &:hover {
+    color: $primary-color;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: $primary-color;
+    transition: all $transition-fast;
+    transform: translateX(-50%);
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}

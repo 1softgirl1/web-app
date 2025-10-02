@@ -13,44 +13,6 @@ body {
   background: #ffffff;
 }
 
-/* ==================
-   Адаптивность
-================== */
-@media (max-width: 1024px) {
-  .header-container {
-    padding: 1.5rem 2rem;
-  }
-  .nav-list {
-    gap: 2rem;
-  }
-  .nav-list li a {
-    font-size: 1.05rem;
-  }
-  #logo img {
-    height: 30px;
-  }
-}
-@media (max-width: 767px) {
-  .header-container {
-    flex-direction: column;
-    padding: 1.5rem 1rem;
-    gap: 1rem;
-    text-align: center;
-  }
-  .nav-list {
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .nav-list li a {
-    font-size: 0.95rem;
-    padding: 0.4rem 0;
-  }
-  .about-content {
-    flex-direction: column;
-    align-items: center;
-  }
-}
 /* Анимация появления слайдов */
 .owl-item.active .item {
   animation: slideInUp 3s ease;
@@ -92,6 +54,7 @@ body {
     transform: scale(1);
   }
 }
+.button,
 button,
 .carousel-button {
   display: inline-block;
@@ -103,6 +66,7 @@ button,
   font-size: 0.9rem;
   transition: background-color 0.3s ease;
 }
+.button:hover,
 button:hover,
 .carousel-button:hover {
   background: #555;
@@ -126,6 +90,41 @@ button:hover,
   justify-content: center;
   z-index: 999;
 }
+#backToTop:hover {
+  background: #555;
+}
+
+.dropdown-toggle {
+  border: none;
+  cursor: pointer;
+  background-color: #ffffff;
+  text-decoration: none;
+  color: #000000;
+  text-transform: lowercase;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.dropdown-toggle:hover {
+  color: #000000;
+}
+.dropdown-toggle:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #000000;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+.dropdown-toggle:hover::after {
+  width: 100%;
+}
 
 .about-content {
   display: flex;
@@ -134,6 +133,12 @@ button:hover,
   gap: 2rem;
 }
 
+@media (max-width: 767px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 @media (min-width: 768px) {
   .about-content {
     flex-direction: row;
@@ -204,14 +209,31 @@ button:hover,
   max-width: 1200px;
   margin: 0 auto;
 }
-
-#logo img {
+@media (max-width: 1024px) {
+  .header-container {
+    padding: 1.5rem 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .header-container {
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+.header-container #logo img {
   height: 30px;
   width: auto;
   transition: transform 0.3s ease;
 }
-#logo img:hover {
+.header-container #logo img:hover {
   transform: scale(1.05);
+}
+@media (max-width: 1024px) {
+  .header-container #logo img {
+    height: 30px;
+  }
 }
 
 .modal {
@@ -254,7 +276,9 @@ button:hover,
   list-style: none;
   gap: 2.5rem;
 }
-
+.nav-list li {
+  display: inline-block;
+}
 .nav-list li a {
   text-decoration: none;
   color: #000000;
@@ -265,6 +289,7 @@ button:hover,
   padding: 0.5rem 0;
   position: relative;
   transition: all 0.3s ease;
+  display: block;
 }
 .nav-list li a::after {
   content: "";
@@ -280,37 +305,24 @@ button:hover,
 .nav-list li a:hover::after, .nav-list li a.active::after {
   width: 100%;
 }
-
-.dropdown-toggle {
-  border: none;
-  cursor: pointer;
-  background-color: #ffffff;
-  text-decoration: none;
-  color: #000000;
-  text-transform: lowercase;
-  font-size: 1.1rem;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  padding: 0.5rem 0;
-  position: relative;
-  transition: all 0.3s ease;
+@media (max-width: 1024px) {
+  .nav-list {
+    gap: 2rem;
+  }
+  .nav-list li a {
+    font-size: 1.05rem;
+  }
 }
-.dropdown-toggle:hover {
-  color: #000000;
-}
-.dropdown-toggle:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 50%;
-  background-color: #000000;
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
-}
-.dropdown-toggle:hover::after {
-  width: 100%;
+@media (max-width: 767px) {
+  .nav-list {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .nav-list li a {
+    font-size: 0.95rem;
+    padding: 0.4rem 0;
+  }
 }
 
 .portfolio-container {

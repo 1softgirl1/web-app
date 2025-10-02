@@ -1,8 +1,10 @@
 @use 'base/base';
+@use 'base/animations';
 
 @use 'utils/variables';
 
 @use 'components/buttons';
+@use 'components/dropdown';
 
 @use 'layout/about';
 @use 'layout/contacts';
@@ -12,3 +14,4 @@
 @use 'layout/navigation';
 @use 'layout/portfolio';
 @use 'layout/section';
+

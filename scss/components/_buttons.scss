@@ -1,5 +1,6 @@
 @use '../utils/variables' as *;
 
+.button,
 button,
 .carousel-button {
   display: inline-block;
@@ -33,4 +34,8 @@ button,
   align-items: center;
   justify-content: center;
   z-index: 999;
+
+  &:hover {
+    background: $accent-hover;
+  }
 }

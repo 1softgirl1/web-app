@@ -5,68 +5,59 @@
   font-family: $font-secondary;
   list-style: none;
   gap: $spacing-xxl;
-}
 
-.nav-list li a {
-  text-decoration: none;
-  color: $primary-color;
-  text-transform: lowercase;
-  font-size: $font-size-lg;
-  font-weight: $font-weight-normal;
-  letter-spacing: $letter-spacing;
-  padding: $spacing-xs 0;
-  position: relative;
-  transition: all $transition-fast;
+  li {
+    display: inline-block;
 
-  &::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 50%;
-    background-color: $primary-color;
-    transition: all $transition-fast;
-    transform: translateX(-50%);
+    a {
+      text-decoration: none;
+      color: $primary-color;
+      text-transform: lowercase;
+      font-size: $font-size-lg;
+      font-weight: $font-weight-normal;
+      letter-spacing: $letter-spacing;
+      padding: $spacing-xs 0;
+      position: relative;
+      transition: all $transition-fast;
+      display: block;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        background-color: $primary-color;
+        transition: all $transition-fast;
+        transform: translateX(-50%);
+      }
+
+      &:hover::after,
+      &.active::after {
+        width: 100%;
+      }
+    }
   }
 
-  &:hover::after,
-  &.active::after {
-    width: 100%;
-  }
-}
-
-.dropdown-toggle {
-  border: none;
-  cursor: pointer;
-  background-color: $secondary-color;
-  text-decoration: none;
-  color: $primary-color;
-  text-transform: lowercase;
-  font-size: $font-size-lg;
-  font-weight: $font-weight-normal;
-  letter-spacing: $letter-spacing;
-  padding: $spacing-xs 0;
-  position: relative;
-  transition: all $transition-fast;
-
-  &:hover {
-    color: $primary-color;
+  @media (max-width: $breakpoint-desktop) {
+    gap: $spacing-xl;
+    li {
+      a {
+        font-size: $font-size-xl;
+      }
+    }
   }
 
-  &:after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 50%;
-    background-color: $primary-color;
-    transition: all $transition-fast;
-    transform: translateX(-50%);
-  }
-
-  &:hover::after {
-    width: 100%;
+  @media (max-width: $breakpoint-mobile) {
+    gap: $spacing-md;
+    flex-wrap: wrap;
+    justify-content: center;
+    li {
+      a {
+        font-size: $font-size-xxl;
+        padding: 0.4rem 0;
+      }
+    }
   }
 }
