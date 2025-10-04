@@ -248,21 +248,21 @@ button:hover,
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--spacing-lg) var(--spacing-xxxl);
+  max-width: var(--container-max-width);
+  margin: var(--header-margin-top, var(--spacing-lg)) auto var(--header-margin-bottom, 0);
+  padding: 0 var(--spacing-xl);
   background-color: var(--color-secondary);
   position: relative;
-  max-width: var(--container-max-width);
-  margin: var(--spacing-xl) auto 0 auto;
 }
 @media (max-width: 1024px) {
   .header-container {
-    padding: var(--spacing-lg) var(--spacing-xl);
+    padding: 0 var(--spacing-md);
   }
 }
 @media (max-width: 767px) {
   .header-container {
     flex-direction: column;
-    padding: var(--spacing-lg) var(--spacing-md);
+    padding: 0 var(--spacing-md);
     gap: var(--spacing-md);
     text-align: center;
   }

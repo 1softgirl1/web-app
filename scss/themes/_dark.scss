@@ -1,5 +1,6 @@
 @import '../utils/variables';
 
+
 body.dark {
   --color-primary: #{$dark-primary-color};
   --color-secondary: #{$dark-secondary-color};
@@ -62,6 +63,7 @@ body.dark {
   --button-padding: var(--spacing-xs) var(--spacing-md);
   --button-font-size: var(--font-size-sm);
   --button-transition: background-color var(--transition-fast);
+
 }
 
 /* Инверсия иконок и логотипа в темной теме */
