@@ -2,7 +2,7 @@
 @use '../utils/mixins' as *;
 
 .about-content {
-  @include flex-center(column, $spacing-xl);
+  @include flex-center(row, $spacing-xl);
 
   @include respond-to(tablet) {
     flex-direction: row;

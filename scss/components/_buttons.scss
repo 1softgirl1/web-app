@@ -5,21 +5,22 @@
 button,
 .carousel-button {
   @include flex-center(row, 0.5rem);
-  background: $accent-color;
-  color: $secondary-color;
-  padding: $spacing-xs $spacing-md;
+  background: var(--button-background, var(--color-accent));
+  color: var(--button-color, var(--color-secondary));
+  padding: var(--button-padding, var(--spacing-xs) var(--spacing-md));
   text-decoration: none;
-  border-radius: $border-radius-lg;
-  font-size: $font-size-sm;
-  transition: background-color $transition-fast;
+  border-radius: var(--button-border-radius, var(--border-radius-lg));
+  font-size: var(--button-font-size, var(--font-size-sm));
+  transition: var(--button-transition, background-color var(--transition-fast));
+  border: none;
 
   &:hover {
-    background: $accent-hover;
+    background: var(--color-accent-hover);
   }
 
   @include respond-to(mobile) {
-    font-size: $font-size-xs;
-    padding: $spacing-xs $spacing-sm;
+    font-size: var(--font-size-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
   }
 }
 
@@ -32,16 +33,16 @@ button,
   width: 45px;
   height: 45px;
   border: none;
-  border-radius: $border-radius-circle;
-  background-color: $primary-color;
-  color: $secondary-color;
+  border-radius: var(--border-radius-circle);
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
   font-size: 22px;
   cursor: pointer;
   display: none;
   z-index: 999;
 
   &:hover {
-    background: $accent-hover;
+    background: var(--color-accent-hover);
   }
 
   @include respond-to(mobile) {

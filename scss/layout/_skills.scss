@@ -8,33 +8,33 @@
 }
 
 .skill-card {
-  background: $background-light;
-  padding: $spacing-lg;
-  border-radius: $border-radius-md;
-  box-shadow: $shadow-light;
+  background: var(--color-page-background);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-light);
 
   h3 {
-    margin-bottom: $spacing-xs;
+    margin-bottom: var(--spacing-xs);
   }
 }
 
 .skill-level {
   width: 100%;
-  height: $skill-bar-height;
-  background: #ddd;
-  border-radius: $border-radius-sm;
-  margin: $spacing-xs 0;
+  height: var(--skill-bar-height);
+  background: var(--color-border);
+  border-radius: var(--border-radius-sm);
+  margin: var(--spacing-xs) 0;
   overflow: hidden;
 }
 
 .skill-progress {
   height: 100%;
-  background: $skill-gradient;
-  border-radius: $border-radius-sm;
-  transition: width $transition-slower;
+  background: var(--color-success);
+  border-radius: var(--border-radius-sm);
+  transition: width var(--transition-slower);
 }
 
 .skill-percent {
-  font-weight: $font-weight-bold;
-  color: $success-color;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-success);
 }

@@ -1,24 +1,22 @@
-@use '../utils/variables' as *;
-
 .nav-list {
   display: none;
-  font-family: $font-secondary;
+  font-family: var(--font-secondary);
   list-style: none;
-  gap: $spacing-xxl;
+  gap: var(--spacing-xxl);
 
   li {
-    display: inline-block;
+    display: block;
 
     a {
       text-decoration: none;
-      color: $primary-color;
+      color: var(--color-primary);
       text-transform: lowercase;
-      font-size: $font-size-lg;
-      font-weight: $font-weight-normal;
-      letter-spacing: $letter-spacing;
-      padding: $spacing-xs 0;
+      font-size: var(--font-size-lg);
+      font-weight: var(--font-weight-normal);
+      letter-spacing: var(--letter-spacing);
+      padding: var(--spacing-xs) 0;
       position: relative;
-      transition: all $transition-fast;
+      transition: all var(--transition-fast);
       display: block;
 
       &::after {
@@ -28,8 +26,8 @@
         height: 2px;
         bottom: 0;
         left: 50%;
-        background-color: $primary-color;
-        transition: all $transition-fast;
+        background-color: var(--color-primary);
+        transition: all var(--transition-fast);
         transform: translateX(-50%);
       }
 
@@ -40,22 +38,22 @@
     }
   }
 
-  @media (max-width: $breakpoint-desktop) {
-    gap: $spacing-xl;
+  @media (max-width: 1024px) {
+    gap: var(--spacing-xl);
     li {
       a {
-        font-size: $font-size-xl;
+        font-size: var(--font-size-xl);
       }
     }
   }
 
-  @media (max-width: $breakpoint-mobile) {
-    gap: $spacing-md;
+  @media (max-width: 767px) {
+    gap: var(--spacing-md);
     flex-wrap: wrap;
     justify-content: center;
     li {
       a {
-        font-size: $font-size-xxl;
+        font-size: var(--font-size-xxl);
         padding: 0.4rem 0;
       }
     }

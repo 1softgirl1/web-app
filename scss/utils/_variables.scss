@@ -1,11 +1,9 @@
-
 // Цвета
 $primary-color: #000000;
 $secondary-color: #ffffff;
 $accent-color: #333;
 $accent-hover: #555;
 $success-color: #4caf50;
-$success-light: #8bc34a;
 $background-light: #f9f9f9;
 $border-color: #ddd;
 $shadow-color: rgba(0, 0, 0, 0.1);
@@ -34,8 +32,6 @@ $spacing-sm: 0.8rem;
 $spacing-md: 1rem;
 $spacing-lg: 1.5rem;
 $spacing-xl: 2rem;
-$spacing-xxl: 2.5rem;
-$spacing-xxxl: 3rem;
 $spacing-4xl: 4rem;
 
 // Размеры
@@ -54,9 +50,6 @@ $shadow-light: 0 1px 3px $shadow-color;
 $shadow-medium: 0 2px 5px $shadow-color;
 $shadow-heavy: 0 5px 15px $shadow-color;
 
-// Градиенты
-$skill-gradient: linear-gradient(90deg, $success-color, $success-light);
-
 // Анимации
 $transition-fast: 0.3s ease;
 $transition-medium: 0.4s ease;
@@ -67,3 +60,14 @@ $transition-slower: 1s ease-in-out;
 $breakpoint-mobile: 767px;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
+
+// Цвета для тёмной темы
+$dark-primary-color: #ffffff;
+$dark-secondary-color: #181818;
+$dark-accent-color: #555;
+$dark-background-light: #232323;
+$dark-border-color: #333;
+$dark-shadow-color: rgba(0, 0, 0, 0.7);
+$dark-modal-overlay: rgba(0, 0, 0, 0.8);
+$dark-text-muted: #bbb;
+

@@ -3,6 +3,10 @@
 
 .contacts-container {
   text-align: center;
+  .open-form-modal {
+    margin-top: $spacing-lg;
+    display: inline-block;
+  }
 }
 
 .contacts-list {
@@ -15,6 +19,6 @@
   }
 
   a {
-    color: $primary-color;
+    color: var(--primary-color);
   }
 }

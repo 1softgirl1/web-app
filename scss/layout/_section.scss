@@ -12,22 +12,22 @@ main {
 }
 
 section {
-  margin-bottom: $spacing-4xl;
-  padding: $spacing-xl;
-  background: $secondary-color;
-  border-radius: $border-radius-lg;
-  box-shadow: $shadow-medium;
-  animation: fadeIn $transition-slow ease;
+  margin-bottom: var(--spacing-4xl);
+  padding: var(--spacing-xl);
+  background: var(--color-secondary);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-medium);
+  animation: fadeIn var(--transition-slow) ease;
 
   @include respond-to(mobile) {
-    padding: $spacing-md;
+    padding: var(--spacing-md);
   }
 }
 
 h2 {
   text-align: center;
-  margin-bottom: $spacing-xl;
-  color: #222;
-  border-bottom: 2px solid #eee;
-  padding-bottom: $spacing-xs;
+  margin-bottom: var(--spacing-xl);
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-border);
+  padding-bottom: var(--spacing-xs);
 }
