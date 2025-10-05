@@ -6,29 +6,28 @@
   border: none;
   cursor: pointer;
   background-color: var(--color-secondary);
-  text-decoration: none;
-  color: var(--primary-color);
+  color: var(--color-primary);
   text-transform: lowercase;
-  font-size: $font-size-lg;
-  font-weight: $font-weight-normal;
-  letter-spacing: $letter-spacing;
-  padding: $spacing-xs 0;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-normal);
+  letter-spacing: var(--letter-spacing);
+  padding: var(--spacing-xs) 0;
   position: relative;
-  transition: all $transition-fast;
+  transition: all var(--transition-fast);
+  display: block;
 
   &:hover {
     color: var(--primary-color);
   }
-
-  &:after {
+  &::after {
     content: '';
     position: absolute;
     width: 0;
     height: 2px;
     bottom: 0;
     left: 50%;
-    background-color: $primary-color;
-    transition: all $transition-fast;
+    background-color: var(--color-primary);
+    transition: all var(--transition-fast);
     transform: translateX(-50%);
   }
 

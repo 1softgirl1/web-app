@@ -53,3 +53,35 @@ button,
     right: 15px;
   }
 }
+
+
+.owl-nav .owl-prev,
+.owl-nav .owl-next {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent !important;
+  color: inherit !important;
+}
+
+
+.owl-nav .owl-prev img,
+.owl-nav .owl-next img {
+
+  width: 20px !important;
+  height: 20px !important;
+  object-fit: contain;
+  filter: brightness(0.5);
+}
+
+
+.owl-nav .owl-prev:hover img,
+.owl-nav .owl-next:hover img {
+  filter: brightness(1);
+  transform: scale(1.5);
+  transition: all 0.3s ease;
+
+}

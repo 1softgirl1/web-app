@@ -68,6 +68,8 @@ body.dark {
 
 /* Инверсия иконок и логотипа в темной теме */
 body.dark #logo img,
+body.dark .owl-nav .owl-prev img,
+body.dark .owl-nav .owl-next img,
 body.dark .contacts-list img[src*="telegram"],
 body.dark .contacts-list img[src*="github"],
 body.dark .contacts-list img[src*="vk"] {

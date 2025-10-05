@@ -124,7 +124,12 @@ $(document).ready(function() {
         },
         autoplay: true,
         autoplayTimeout: 3000,
-        autoplayHoverPause: true
+        autoplayHoverPause: true,
+
+        navText: [
+            "<img src='img/left-arrow.png' alt='Previous'>",
+            "<img src='img/right-arrow.png' alt='Next'>"
+        ]
     });
 
     //Кнопка «Вверх» — плавный скролл к началу страницы
