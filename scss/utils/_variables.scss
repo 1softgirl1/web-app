@@ -1,0 +1,73 @@
+// Цвета
+$primary-color: #000000;
+$secondary-color: #ffffff;
+$accent-color: #333;
+$accent-hover: #555;
+$success-color: #4caf50;
+$background-light: #f9f9f9;
+$border-color: #ddd;
+$shadow-color: rgba(0, 0, 0, 0.1);
+$modal-overlay: rgba(0, 0, 0, 0.5);
+$text-muted: #999;
+
+// Типографика
+$font-primary: 'Open Sans', sans-serif;
+$font-secondary: 'Albert Sans', sans-serif;
+$font-weight-normal: 500;
+$font-weight-bold: bold;
+$line-height-base: 1.6;
+$letter-spacing: 0.5px;
+
+// Размеры шрифтов
+$font-size-base: 1rem;
+$font-size-xs: 0.8rem;
+$font-size-sm: 0.9rem;
+$font-size-lg: 1.1rem;
+$font-size-xl: 1.05rem;
+$font-size-xxl: 0.95rem;
+
+// Отступы
+$spacing-xs: 0.5rem;
+$spacing-sm: 0.8rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+$spacing-4xl: 4rem;
+
+// Размеры
+$container-max-width: 1200px;
+$avatar-size: 200px;
+$border-radius-sm: 5px;
+$border-radius-md: 8px;
+$border-radius-lg: 20px;
+$border-radius-circle: 50%;
+$skill-bar-height: 10px;
+$portfolio-img-height: 200px;
+$logo-height: 30px;
+
+// Тени
+$shadow-light: 0 1px 3px $shadow-color;
+$shadow-medium: 0 2px 5px $shadow-color;
+$shadow-heavy: 0 5px 15px $shadow-color;
+
+// Анимации
+$transition-fast: 0.3s ease;
+$transition-medium: 0.4s ease;
+$transition-slow: 0.8s ease;
+$transition-slower: 1s ease-in-out;
+
+// Breakpoints
+$breakpoint-mobile: 767px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+// Цвета для тёмной темы
+$dark-primary-color: #ffffff;
+$dark-secondary-color: #181818;
+$dark-accent-color: #555;
+$dark-background-light: #232323;
+$dark-border-color: #333;
+$dark-shadow-color: rgba(0, 0, 0, 0.7);
+$dark-modal-overlay: rgba(0, 0, 0, 0.8);
+$dark-text-muted: #bbb;
+

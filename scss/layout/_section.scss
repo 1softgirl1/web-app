@@ -1,0 +1,33 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+main {
+  max-width: $container-max-width;
+  margin: $spacing-xl auto;
+  padding: 0 $spacing-xl;
+
+  @include respond-to(mobile) {
+    padding: 0 $spacing-md;
+  }
+}
+
+section {
+  margin-bottom: var(--spacing-4xl);
+  padding: var(--spacing-xl);
+  background: var(--color-secondary);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-medium);
+  animation: fadeIn var(--transition-slow) ease;
+
+  @include respond-to(mobile) {
+    padding: var(--spacing-md);
+  }
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-border);
+  padding-bottom: var(--spacing-xs);
+}

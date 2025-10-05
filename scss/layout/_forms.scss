@@ -1,0 +1,20 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+#contactForm {
+  @include flex-center(column, 15px);
+  margin-top: 20px;
+
+  input,
+  textarea {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: $border-radius-sm;
+    font-size: 16px;
+  }
+
+  textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+}

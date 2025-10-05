@@ -1,0 +1,37 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.dropdown-toggle {
+  @include flex-center();
+  border: none;
+  cursor: pointer;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  text-transform: lowercase;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-normal);
+  letter-spacing: var(--letter-spacing);
+  padding: var(--spacing-xs) 0;
+  position: relative;
+  transition: all var(--transition-fast);
+  display: block;
+
+  &:hover {
+    color: var(--primary-color);
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--color-primary);
+    transition: all var(--transition-fast);
+    transform: translateX(-50%);
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}

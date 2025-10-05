@@ -1,0 +1,59 @@
+@import '../utils/variables';
+
+:root {
+  --color-primary: #{$primary-color};
+  --color-secondary: #{$secondary-color};
+  --color-accent: #{$accent-color};
+  --color-accent-hover: #{$accent-hover};
+  --color-success: #{$success-color};
+  --color-page-background: #{$background-light};
+  --color-border: #{$border-color};
+  --color-shadow: #{$shadow-color};
+  --color-modal-overlay: #{$modal-overlay};
+  --color-text-muted: #{$text-muted};
+
+  --font-primary: #{$font-primary};
+  --font-secondary: #{$font-secondary};
+  --font-weight-normal: #{$font-weight-normal};
+  --font-weight-bold: #{$font-weight-bold};
+  --line-height-base: #{$line-height-base};
+  --letter-spacing: #{$letter-spacing};
+
+  --font-size-base: #{$font-size-base};
+  --font-size-xs: #{$font-size-xs};
+  --font-size-sm: #{$font-size-sm};
+  --font-size-lg: #{$font-size-lg};
+  --font-size-xl: #{$font-size-xl};
+  --font-size-xxl: #{$font-size-xxl};
+
+  --spacing-xs: #{$spacing-xs};
+  --spacing-sm: #{$spacing-sm};
+  --spacing-md: #{$spacing-md};
+  --spacing-lg: #{$spacing-lg};
+  --spacing-xl: #{$spacing-xl};
+  --spacing-4xl: #{$spacing-4xl};
+
+  --container-max-width: #{$container-max-width};
+  --avatar-size: #{$avatar-size};
+  --border-radius-sm: #{$border-radius-sm};
+  --border-radius-md: #{$border-radius-md};
+  --border-radius-lg: #{$border-radius-lg};
+  --border-radius-circle: #{$border-radius-circle};
+  --skill-bar-height: #{$skill-bar-height};
+  --portfolio-img-height: #{$portfolio-img-height};
+  --logo-height: #{$logo-height};
+
+  --shadow-light: #{$shadow-light};
+  --shadow-medium: #{$shadow-medium};
+  --shadow-heavy: #{$shadow-heavy};
+
+  --transition-fast: #{$transition-fast};
+  --transition-medium: #{$transition-medium};
+  --transition-slow: #{$transition-slow};
+  --transition-slower: #{$transition-slower};
+
+  --breakpoint-mobile: #{$breakpoint-mobile};
+  --breakpoint-tablet: #{$breakpoint-tablet};
+  --breakpoint-desktop: #{$breakpoint-desktop};
+
+}

@@ -1,0 +1,24 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.contacts-container {
+  text-align: center;
+  .open-form-modal {
+    margin-top: $spacing-lg;
+    display: inline-block;
+  }
+}
+
+.contacts-list {
+  list-style: none;
+  margin-top: $spacing-lg;
+
+  li {
+    @include flex-center();
+    margin-bottom: $spacing-md;
+  }
+
+  a {
+    color: var(--primary-color);
+  }
+}

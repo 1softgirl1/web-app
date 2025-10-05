@@ -1,0 +1,23 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  line-height: var(--line-height-base);
+  color: var(--color-primary);
+  background: var(--color-secondary);
+}
+
+footer {
+  @include flex-center(column);
+  padding: 20px;
+}
+

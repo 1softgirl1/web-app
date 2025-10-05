@@ -1,0 +1,78 @@
+@import '../utils/variables';
+
+
+body.dark {
+  --color-primary: #{$dark-primary-color};
+  --color-secondary: #{$dark-secondary-color};
+  --color-accent: #{$dark-accent-color};
+  --color-accent-hover: #{$accent-hover};
+  --color-success: #{$success-color};
+  --color-page-background: #{$dark-background-light};
+  --color-border: #{$dark-border-color};
+  --color-shadow: #{$dark-shadow-color};
+  --color-modal-overlay: #{$dark-modal-overlay};
+  --color-text-muted: #{$dark-text-muted};
+
+  --font-primary: #{$font-primary};
+  --font-secondary: #{$font-secondary};
+  --font-weight-normal: #{$font-weight-normal};
+  --font-weight-bold: #{$font-weight-bold};
+  --line-height-base: #{$line-height-base};
+  --letter-spacing: #{$letter-spacing};
+
+  --font-size-base: #{$font-size-base};
+  --font-size-xs: #{$font-size-xs};
+  --font-size-sm: #{$font-size-sm};
+  --font-size-lg: #{$font-size-lg};
+  --font-size-xl: #{$font-size-xl};
+  --font-size-xxl: #{$font-size-xxl};
+
+  --spacing-xs: #{$spacing-xs};
+  --spacing-sm: #{$spacing-sm};
+  --spacing-md: #{$spacing-md};
+  --spacing-lg: #{$spacing-lg};
+  --spacing-xl: #{$spacing-xl};
+  --spacing-4xl: #{$spacing-4xl};
+
+  --container-max-width: #{$container-max-width};
+  --avatar-size: #{$avatar-size};
+  --border-radius-sm: #{$border-radius-sm};
+  --border-radius-md: #{$border-radius-md};
+  --border-radius-lg: #{$border-radius-lg};
+  --border-radius-circle: #{$border-radius-circle};
+  --skill-bar-height: #{$skill-bar-height};
+  --portfolio-img-height: #{$portfolio-img-height};
+  --logo-height: #{$logo-height};
+
+  --shadow-light: #{$shadow-light};
+  --shadow-medium: #{$shadow-medium};
+  --shadow-heavy: #{$shadow-heavy};
+
+  --transition-fast: #{$transition-fast};
+  --transition-medium: #{$transition-medium};
+  --transition-slow: #{$transition-slow};
+  --transition-slower: #{$transition-slower};
+
+  --breakpoint-mobile: #{$breakpoint-mobile};
+  --breakpoint-tablet: #{$breakpoint-tablet};
+  --breakpoint-desktop: #{$breakpoint-desktop};
+
+  --button-background: var(--color-accent);
+  --button-color: var(--color-primary);
+  --button-border-radius: var(--border-radius-lg);
+  --button-padding: var(--spacing-xs) var(--spacing-md);
+  --button-font-size: var(--font-size-sm);
+  --button-transition: background-color var(--transition-fast);
+
+}
+
+/* Инверсия иконок и логотипа в темной теме */
+body.dark #logo img,
+body.dark .owl-nav .owl-prev img,
+body.dark .owl-nav .owl-next img,
+body.dark .contacts-list img[src*="telegram"],
+body.dark .contacts-list img[src*="github"],
+body.dark .contacts-list img[src*="vk"] {
+  filter: invert(1) brightness(1.2) contrast(1.1);
+  transition: filter 0.3s;
+}

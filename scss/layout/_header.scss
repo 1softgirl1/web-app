@@ -1,0 +1,40 @@
+@use '../utils/variables' as *;
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--container-max-width);
+  margin: var(--header-margin-top, var(--spacing-lg)) auto var(--header-margin-bottom, 0);
+  padding: 0 var(--spacing-xl);
+  background-color: var(--color-secondary);
+  position: relative;
+
+  @media (max-width: 1024px) {
+    padding: 0 var(--spacing-md);
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    padding: 0 var(--spacing-md);
+    gap: var(--spacing-md);
+    text-align: center;
+  }
+
+  #logo {
+    img {
+      height: var(--logo-height);
+      width: auto;
+      transition: transform var(--transition-fast);
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      @media (max-width: 1024px) {
+        height: var(--logo-height);
+      }
+    }
+  }
+}
+

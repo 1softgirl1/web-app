@@ -1,0 +1,40 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.skills-container {
+  @include flex-center(column, 1.5rem);
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.skill-card {
+  background: var(--color-page-background);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-light);
+
+  h3 {
+    margin-bottom: var(--spacing-xs);
+  }
+}
+
+.skill-level {
+  width: 100%;
+  height: var(--skill-bar-height);
+  background: var(--color-border);
+  border-radius: var(--border-radius-sm);
+  margin: var(--spacing-xs) 0;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background: var(--color-success);
+  border-radius: var(--border-radius-sm);
+  transition: width var(--transition-slower);
+}
+
+.skill-percent {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-success);
+}
